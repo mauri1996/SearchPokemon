@@ -1,6 +1,6 @@
 # Adivinar el Pokemon
 
-![01](./assets/image-ref.jpg)
+![01](./src/assets/image-ref.jpg)
 
 Este proyecto tiene 3 milestones o entregas
 
