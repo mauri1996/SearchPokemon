@@ -1,7 +1,21 @@
 <template>
-  <div class="">
-    <img :src="image" :id="id" v-bind:class="getClass" />
-    <h3 v-if="active">{{ name }}</h3>
+  <div class="view-score">
+    <div class="score">
+      <p>Correctas</p>
+      <div class="correct">
+        {{ this.$store.state.correctPoint }}
+      </div>
+    </div>
+    <div class="">
+      <img :src="image" :id="id" v-bind:class="getClass" />
+      <h3 v-if="active">{{ name }}</h3>
+    </div>
+    <div class="score">
+      <p>Incorrectas</p>
+      <div class="incorrect">
+        {{ this.$store.state.incorrectPoint }}
+      </div>
+    </div>
   </div>
 </template>
 

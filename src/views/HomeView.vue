@@ -57,7 +57,9 @@ export default {
   },
   methods: {
     getPokemon() {
-      this.$emit("adivinar");
+      if (!this.again) {
+        this.$emit("adivinar");
+      }
     },
     getNewPokemon() {
       this.$emit("newPokemon");
@@ -70,8 +72,10 @@ export default {
       this.normal = false;
       if (Filter.filter(this.nameInsert) == Filter.filter(value)) {
         this.correct = true;
+        this.$store.commit("addCorrectPoint");
       } else {
         this.correct = false;
+        this.$store.commit("addIncorrectPoint");
       }
       this.again = true;
       this.activeButton = false;

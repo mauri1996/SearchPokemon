@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 96vh;
 }
 
 nav {
@@ -39,12 +40,14 @@ samp {
 }
 
 .pokemon {
-  width: 40%;
+  /* width: 40%; */
+  width: 300px;
   filter: contrast(0%);
 }
 
 .pokemonActive {
-  width: 40%;
+  /* width: 40%; */
+  width: 300px;
   filter: contrast(100%);
 }
 
@@ -67,7 +70,6 @@ body {
 .home {
   border: solid;
   padding: 5%;
-  margin-top: 4%;
 }
 
 .footer {
@@ -85,5 +87,25 @@ body {
 
 .normal {
   background-color: none;
+}
+
+.view-score {
+  display: flex;
+  justify-content: space-around;
+  margin: 3%;
+}
+
+.correct {
+  color: greenyellow;
+}
+
+.incorrect {
+  color: indianred;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
