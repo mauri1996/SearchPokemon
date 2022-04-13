@@ -74,4 +74,16 @@ body {
   float: right;
   margin-right: 5%;
 }
+
+.correctAns {
+  background-color: greenyellow;
+}
+
+.inccorrectAns {
+  background-color: indianred;
+}
+
+.normal {
+  background-color: none;
+}
 </style>

@@ -16,6 +16,7 @@ export default {
       image:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
       active: false,
+      styleNormal: true,
     };
   },
   computed: {
@@ -24,7 +25,7 @@ export default {
     },
   },
   methods: {
-    searchPokemon: function () {
+    searchNewPokemon: function () {
       const data = Api.random();
       this.id = data.id;
       this.name = data.name;
@@ -33,16 +34,18 @@ export default {
     },
     showPokemon: function () {
       this.active = true;
-      setTimeout(() => {
-        this.searchPokemon();
-      }, 2000);
+      this.$emit("valid", this.name);
+      // setTimeout(() => {
+      //   this.searchNewPokemon();
+      // }, 2000);
     },
   },
   mounted() {
-    this.searchPokemon();
+    this.searchNewPokemon();
   },
   created: function () {
-    this.$parent.$on("change", this.showPokemon);
+    this.$parent.$on("adivinar", this.showPokemon);
+    this.$parent.$on("newPokemon", this.searchNewPokemon);
   },
 };
 </script>
