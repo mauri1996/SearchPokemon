@@ -36,7 +36,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "font-family you want to use";
+  font-family: "Press Start 2P";
 }
 
 .pokemon {
